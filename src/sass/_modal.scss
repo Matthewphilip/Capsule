@@ -1,0 +1,140 @@
+/* Mobile-first styles for the modal */
+.modal-overlay {
+    display: none;
+    justify-content: flex-start;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal {
+    position: fixed;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 80px;
+    left: 0;
+    margin: 10px;
+}
+
+.modal-title {
+    color: #011440;
+    font-size: 24px;
+}
+
+.modal-text {
+    color: #4D576B;
+}
+
+.modal-form {
+    padding-top: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.name-inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.input-single {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input-group label {
+    margin-bottom: 10px;
+
+}
+
+.input-group label {
+    font-size: 14px;
+    font-weight: 600;
+
+}
+
+.input-group input {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border-color: #D9DFE8 !important;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: none;
+    font-size: 16px;
+    background-color: white;
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: #444BF7 !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    /* Set the new border color */
+}
+
+.modal-button {
+    background-color: #444BF7;
+    color: white;
+    border-radius: 35px;
+    padding: 15px 25px;
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 25px;
+    color: #8691A5;
+    border: none;
+    background-color: white;
+}
+
+/* Styles for larger screens (min-width: 768px) */
+@media screen and (min-width: 768px) {
+    .modal-overlay {
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal {
+        width: 80%;
+        max-width: 600px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+    }
+
+    .input-group {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .name-inputs {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .input-single:not(:last-child) {
+        margin-right: 20px;
+    }
+
+}

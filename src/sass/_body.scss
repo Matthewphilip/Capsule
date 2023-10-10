@@ -1,0 +1,156 @@
+.body-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left-container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.right-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.test1 {
+    font-size: 52px;
+    font-weight: 700;
+    color: #202938;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    display: none;
+
+}
+
+.test2 {
+    display: none;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.test2 img {
+    border-radius: 30px;
+    display: none;
+}
+
+.contributor-image {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.mobile-title {
+    font-size: 36px;
+    font-weight: 900;
+    color: #202938;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    margin-top: 30px;
+
+}
+
+.mobile-contributors {
+    display: flex;
+    align-items: center;
+    height: 28px;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.mobile-contributors img {
+    width: 28px;
+    height: 28px;
+    border-radius: 30px;
+    display: flex;
+}
+
+.text-container {
+    font-size: 16px;
+    line-height: 28.8px;
+    margin-bottom: 16px;
+}
+
+.lander-button {
+    background-color: #444BF7;
+    color: white;
+    border-radius: 35px;
+    padding: 15px 40px;
+    border: none;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 100px;
+    // width: 327px;
+    // height: 64px;
+}
+
+.e-book {
+    width: 327px;
+    height: 459px;
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .body-container {
+        flex-direction: row;
+        align-items: center;
+        margin-top: 90px;
+    }
+
+    .right-container {
+        align-items: start;
+        margin-left: 90px;
+    }
+
+    .mobile-title {
+        display: none;
+
+    }
+
+    .mobile-contributors {
+        display: none;
+    }
+
+    .mobile-contributors img {
+        display: none;
+    }
+
+    .test1 {
+        display: flex;
+
+    }
+
+    .test2 {
+        display: flex;
+    }
+
+    .test2 img {
+        display: flex;
+    }
+
+    .text-container {
+        padding-right: 50px;
+    }
+
+    .lander-button {
+        width: 275px;
+        margin-bottom: none;
+
+    }
+
+    .mobile-contributors {
+        width: 436px;
+        height: 526px;
+    }
+
+    .e-book {
+        width: 436px;
+        height: 526px;
+    }
+
+}

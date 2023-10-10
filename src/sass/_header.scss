@@ -1,0 +1,104 @@
+/* Basic styles for the navbar */
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  color: white;
+  padding: 10px 20px;
+
+}
+
+/* Links styles */
+.navbar-actions {
+  flex-grow: 1;
+  /* Let the links fill the remaining space */
+}
+
+/* Links styles */
+.navbar-actions ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  gap: 20px;
+  justify-content: flex-end;
+  /* Align links to the right */
+}
+
+.navbar-actions li {
+  font-size: 18px;
+}
+
+.navbar-actions a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Button styles */
+.navbar-button button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 50px;
+}
+
+/* Hamburger menu styles */
+.navbar-toggle {
+  display: none;
+  /* Hide initially on larger screens */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.navbar-toggle span {
+  width: 30px;
+  height: 4px;
+  background-color: black;
+  margin: 4px 0;
+}
+
+/* Media query for responsive design */
+@media screen and (max-width: 768px) {
+
+  /* Hide the logo and button on smaller screens */
+  .navbar-logo,
+  .navbar-button {
+    display: none;
+  }
+
+  /* Show the hamburger menu icon */
+  .navbar-toggle {
+    display: flex;
+  }
+
+  /* Display the links as a vertical list */
+  .navbar-actions ul {
+    flex-direction: column;
+    text-align: center;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    transition: max-height 0.3s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  .navbar-actions.active ul {
+    max-height: 200px;
+    /* Adjust as needed */
+  }
+
+  .navbar-actions li {
+    margin: 10px 0;
+  }
+
+  /* Style the active class for the hamburger menu */
+  .navbar-actions.active {
+    position: relative;
+  }
+}

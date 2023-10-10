@@ -1,0 +1,20 @@
+@import 'header';
+@import 'body';
+@import 'modal';
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+.lander-container {
+    margin-right: 20px;
+    margin-left: 20px;
+
+}
+
+@media screen and (min-width: 768px) {
+    .lander-container {
+        margin-right: 200px;
+        margin-left: 200px;
+    }
+}
