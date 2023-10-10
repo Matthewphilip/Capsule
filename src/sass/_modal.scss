@@ -105,6 +105,25 @@
     background-color: white;
 }
 
+.button-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.confirmation-text {
+    display: none;
+    color: green;
+    margin-left: 20px;
+}
+
+.error-message {
+    display: none;
+    font-size: 15px;
+    color: red;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
 /* Styles for larger screens (min-width: 768px) */
 @media screen and (min-width: 768px) {
     .modal-overlay {
@@ -135,6 +154,14 @@
 
     .input-single:not(:last-child) {
         margin-right: 20px;
+    }
+
+    .button-group {
+        flex-direction: row;
+    }
+
+    .confirmation-text {
+        margin-left: none;
     }
 
 }

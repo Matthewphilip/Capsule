@@ -23,18 +23,20 @@
         <img src="/logo.726d37a8.png" alt="Company logo">
         <div class="navbar-actions">
           <ul>
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-            <li><a href="#">Link 3</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Customers</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">About</a></li>
           </ul>
         </div>
         <div class="navbar-button">
-          <button>Button</button>
+          <button>Try for free</button>
         </div>
         <div class="navbar-toggle">
-          <span>test1</span>
-          <span>test2</span>
-          <span>test3</span>
+          <span>Features</span>
+          <span>Customers</span>
+          <span>Pricing</span>
+          <span>About</span>
         </div>
       </nav>
 
@@ -89,19 +91,26 @@
                 <div class="name-inputs">
                   <div class="input-single">
                     <label for="first_name">First Name:</label>
-                    <input placeholder="Bob" type="text" id="first_name" name="first_name" required="">
+                    <input placeholder="Bob" type="text" id="first_name" name="first_name">
+                    <div class="error-message" id="first_name_error"></div>
                   </div>
                   <div class="input-single">
                     <label for="last_name">Last Name:</label>
-                    <input placeholder="Burgers" type="text" id="last_name" name="last_name" required="">
+                    <input placeholder="Burgers" type="text" id="last_name" name="last_name">
+                    <div class="error-message" id="last_name_error"></div>
                   </div>
                 </div>
 
                 <label for="email">Email:</label>
-                <input placeholder="bob@burgers.com" type="email" id="email" name="email" required="">
+                <input placeholder="bob@burgers.com" type="email" id="email" name="email">
+                <div class="error-message" id="email_error"></div>
               </div>
-
-              <button class="modal-button" type="submit">Submit</button>
+              <div class="button-group">
+                <button class="modal-button" type="submit">Submit</button>
+                <p class="confirmation-text">
+                  Check your inbox for the download link
+                </p>
+              </div>
             </form>
           </div>
         </div>

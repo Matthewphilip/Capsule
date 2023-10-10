@@ -18,22 +18,26 @@
 }
 
 .navbar-actions li {
-  font-size: 18px;
+  color: #202938;
+  margin-right: 15px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .navbar-actions a {
-  color: #000;
+  color: #202938;
   text-decoration: none;
 }
 
 .navbar-button button {
   color: #fff;
   cursor: pointer;
-  background-color: #007bff;
+  background-color: #444bf7;
   border: none;
-  border-radius: 5px;
+  border-radius: 20px;
   margin-left: 50px;
   padding: 10px 20px;
+  font-size: 16px;
   font-weight: bold;
 }
 
@@ -310,6 +314,25 @@
   right: 20px;
 }
 
+.button-group {
+  flex-direction: column;
+  display: flex;
+}
+
+.confirmation-text {
+  color: green;
+  margin-left: 20px;
+  display: none;
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-weight: 600;
+  display: none;
+}
+
 @media screen and (width >= 768px) {
   .modal-overlay {
     justify-content: center;
@@ -339,6 +362,14 @@
 
   .input-single:not(:last-child) {
     margin-right: 20px;
+  }
+
+  .button-group {
+    flex-direction: row;
+  }
+
+  .confirmation-text {
+    margin-left: none;
   }
 }
 
