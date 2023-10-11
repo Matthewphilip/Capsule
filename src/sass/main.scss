@@ -1,6 +1,7 @@
 @import 'header';
 @import 'body';
 @import 'modal';
+@import 'menu';
 
 * {
     font-family: 'Inter', sans-serif;
@@ -12,7 +13,14 @@
 
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 440px) {
+    .lander-container {
+        margin-right: 120px;
+        margin-left: 120px;
+    }
+}
+
+@media screen and (min-width: 1320px) {
     .lander-container {
         margin-right: 200px;
         margin-left: 200px;

@@ -9,17 +9,19 @@ const modalOverlay = document.getElementById("modalOverlay");
 const modal = document.getElementById("modal");
 const closeModal = document.getElementById("closeModal");
 const downloadButton = document.querySelector(".lander-button");
-const downloadForm = document.getElementById("downloadForm");
-const modalButton = document.querySelector(".modal-button");
-const confirmationText = document.querySelector(".confirmation-text");
+const firstNameInput = document.getElementById("first_name");
+const lastNameInput = document.getElementById("last_name");
+const emailInput = document.getElementById("email");
 const firstNameError = document.getElementById("first_name_error");
 const lastNameError = document.getElementById("last_name_error");
 const emailError = document.getElementById("email_error");
+const downloadForm = document.getElementById("downloadForm");
+const modalButton = document.querySelector(".modal-button");
+const confirmationText = document.querySelector(".confirmation-text");
 // open modal on button click
 downloadButton.addEventListener("click", function() {
     // return user to top of screen for modal on mobile if the window width is <= 768px
-    if (window.innerWidth <= 768) // scroll to the top of the page for mobile
-    window.scrollTo(0, 0);
+    if (window.innerWidth <= 768) window.scrollTo(0, 0);
     modalOverlay.style.display = "flex";
 });
 // close button on 'x' click
@@ -30,12 +32,37 @@ closeModal.addEventListener("click", function() {
 modalOverlay.addEventListener("click", function(e) {
     if (e.target === modalOverlay) modalOverlay.style.display = "none";
 });
+// first-name input error: if user has an error but then starts typing error classes are removed
+firstNameInput.addEventListener("input", function() {
+    if (this.value.trim() !== "") {
+        firstNameError.style.display = "none";
+        this.classList.remove("error");
+        this.placeholder = "First Name";
+    }
+    // if the first name input has more than 3 characters disable it
+    if (this.value.length > 3) this.disabled = true;
+    else this.disabled = false;
+});
+// last-name input error: if user has an error but then starts typing error classes are removed
+lastNameInput.addEventListener("input", function() {
+    if (this.value.trim() !== "") {
+        lastNameError.style.display = "none";
+        this.classList.remove("error");
+        this.placeholder = "Last Name";
+    }
+});
+// email input error: if user has an error but then starts typing error classes are removed
+emailInput.addEventListener("input", function() {
+    if (this.value.trim() !== "") {
+        emailError.style.display = "none";
+        this.classList.remove("error");
+        this.placeholder = "Email";
+    }
+});
 downloadForm.addEventListener("submit", function(e) {
     e.preventDefault();
-    // reset error messages
-    firstNameError.style.display = "none";
-    lastNameError.style.display = "none";
-    emailError.style.display = "none";
+    // prior to form submission enable to disabled value, otherwise form won't submit
+    firstNameInput.disabled = false;
     // get form data for entered values
     const formData = new FormData(downloadForm);
     // update the form object with entered form data
@@ -49,16 +76,31 @@ downloadForm.addEventListener("submit", function(e) {
     if (form.first_name.trim() === "") {
         firstNameError.textContent = "First name is required.";
         firstNameError.style.display = "flex";
+        firstNameInput.classList.add("error");
+        firstNameInput.placeholder = "Error";
+    } else {
+        firstNameInput.classList.remove("error");
+        firstNameInput.placeholder = "First Name";
     }
     // check if last name's empty
     if (form.last_name.trim() === "") {
         lastNameError.textContent = "Last name is required.";
         lastNameError.style.display = "flex";
+        lastNameInput.classList.add("error");
+        lastNameInput.placeholder = "Error";
+    } else {
+        lastNameInput.classList.remove("error");
+        lastNameInput.placeholder = "Last Name";
     }
     // check if email's empty and it doesn't include '@'
     if (form.email.trim() === "" || !form.email.includes("@")) {
         emailError.textContent = "Email is required.";
         emailError.style.display = "flex";
+        emailInput.classList.add("error");
+        emailInput.placeholder = "Error";
+    } else {
+        emailInput.classList.remove("error");
+        emailInput.placeholder = "Email";
     }
     console.log("first validations");
     // check if values aren't empty

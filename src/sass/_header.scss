@@ -48,7 +48,7 @@
   display: flex;
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1050px) {
 
   .navbar-button button {
     display: none;
@@ -65,15 +65,6 @@
 
   .navbar-toggle {
     display: none;
-  }
-
-  // display the links as a horizontal list for larger screens
-  .navbar-actions ul {
-    flex-direction: row;
-    justify-content: flex-end;
-    position: static;
-    max-height: none;
-    overflow: visible;
   }
 
   .navbar-actions li {

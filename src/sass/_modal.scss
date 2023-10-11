@@ -64,25 +64,50 @@
 
 }
 
-.input-group input {
+.input-group-input {
     padding: 15px;
     margin-bottom: 20px;
     border-radius: 10px;
-    border-color: #D9DFE8 !important;
+    border-color: #D9DFE8;
     border-style: solid;
     border-width: 1px;
     box-shadow: none;
     font-size: 16px;
     background-color: white;
     outline: none;
+    color: #4D576B;
 }
 
-.input-group input:focus {
+.input-group-input:disabled {
+    background-color: #F8F9FB;
+    color: #D4D9DF;
+    cursor: not-allowed;
+}
+
+.input-group-input:hover {
+    border-color: #ACB1B7;
+}
+
+.input-group-input:hover::placeholder {
+    color: #B2B9C4;
+}
+
+.input-group-input.error {
+    border: 1px solid red;
+    /* Set border color to red on error */
+}
+
+.input-group-input.error::placeholder {
+    color: red;
+    /* Change placeholder text color to red on error */
+}
+
+.input-group-input:focus {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
 }
 
-.input-group input:focus {
-    border-color: #444BF7 !important;
+.input-group-input:focus {
+    border-color: #444BF7;
 }
 
 .modal-button {
@@ -114,7 +139,7 @@
 .confirmation-text {
     display: none;
     color: green;
-    margin-left: 20px;
+    text-align: center;
 }
 
 .error-message {
@@ -161,7 +186,9 @@
     }
 
     .confirmation-text {
-        margin-left: none;
+        margin-left: 20px;
+        text-align: left;
     }
+
 
 }

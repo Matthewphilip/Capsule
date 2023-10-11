@@ -5,34 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700" rel="stylesheet">
-    <link rel="shortcut icon" href="/logo.726d37a8.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/logo.a0487e91.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="/index.f7626f62.css">
-    <script defer="" src="/index.f85ccfd0.js"></script>
+    <link rel="stylesheet" href="/main.2026268b.css">
+    <script defer="" src="/main.c48f6146.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat&display=swap" rel="stylesheet">
 
     <title>Capsule tech-test</title>
-  </head>
+  <script src="/main.2026268b.js"></script></head>
 
   <body>
     <div class="lander-container">
       <nav class="navbar-container">
-        <img src="/logo.726d37a8.png" alt="Company logo">
+        <img src="/logo.a0487e91.png" alt="Company logo">
         <div class="navbar-actions">
           <ul>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">Customers</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="http://www.google.com">Features</a></li>
+            <li><a href="http://www.google.com">Customers</a></li>
+            <li><a href="http://www.google.com">Pricing</a></li>
+            <li><a href="http://www.google.com">About</a></li>
           </ul>
         </div>
         <div class="navbar-button">
           <button href="">Try for free</button>
         </div>
-        <img class="navbar-toggle" src="/burger-menu.e6278136.png" alt="Burger menu">
+        <div class="menu-container">
+          <a id="hamburger-menu" href="#">
+            <img class="navbar-toggle" src="/burger-menu.0db24c5d.png" alt="Burger menu">
+          </a>
+          <div id="menu-body" class="menu-body">
+            <ul>
+              <li><a href="http://www.google.com">Features</a></li>
+              <li><a href="http://www.google.com">Customers</a></li>
+              <li><a href="http://www.google.com">Pricing</a></li>
+              <li><a href="http://www.google.com">About</a></li>
+            </ul>
+          </div>
+        </div>
       </nav>
 
       <div class="body-container">
@@ -40,18 +52,18 @@
           <p class="mobile-title">Download our wonderful eBook</p>
           <p class="mobile-contributors">
             By
-            <span class="contributor-image"><img src="/katia.ecd8a9fc.png" alt="Author - Katia De Juan"></span>Katia De Juan
-            <span class="contributor-image"><img src="/gavin.d7b9b758.png" alt="Author - Gavin Williams"></span>
+            <span class="contributor-image"><img src="/katia.bc54918b.png" alt="Author - Katia De Juan"></span>Katia De Juan
+            <span class="contributor-image"><img src="/gavin.6e419a35.png" alt="Author - Gavin Williams"></span>
             Gavin Williams
           </p>
-          <img class="e-book" src="/book.6a23a777.png" alt="Remote working for marketing teams">
+          <img class="e-book" src="/book.88d39183.png" alt="Remote working for marketing teams">
         </div>
         <div class="right-container">
           <p class="title-large">Download our wonderful eBook</p>
           <p class="contributor-large">
             By
-            <span><img class="contributor-image" src="/katia.ecd8a9fc.png" alt="Author - Katia De Juan"></span>Katia De Juan
-            <span class="contributor-image"><img src="/gavin.d7b9b758.png" alt="Author - Gavin Williams"></span>
+            <span><img class="contributor-image" src="/katia.bc54918b.png" alt="Author - Katia De Juan"></span>Katia De Juan
+            <span class="contributor-image"><img src="/gavin.6e419a35.png" alt="Author - Gavin Williams"></span>
             Gavin Williams
           </p>
           <div class="text-container">
@@ -86,18 +98,18 @@
                 <div class="name-inputs">
                   <div class="input-single">
                     <label for="first_name">First Name:</label>
-                    <input placeholder="Bob" type="text" id="first_name" name="first_name">
+                    <input placeholder="Bob" type="text" id="first_name" name="first_name" class="input-group-input">
                     <div class="error-message" id="first_name_error"></div>
                   </div>
                   <div class="input-single">
                     <label for="last_name">Last Name:</label>
-                    <input placeholder="Burgers" type="text" id="last_name" name="last_name">
+                    <input placeholder="Burgers" type="text" id="last_name" name="last_name" class="input-group-input">
                     <div class="error-message" id="last_name_error"></div>
                   </div>
                 </div>
 
                 <label for="email">Email:</label>
-                <input placeholder="bob@burgers.com" type="email" id="email" name="email">
+                <input placeholder="bob@burgers.com" type="email" id="email" name="email" class="input-group-input">
                 <div class="error-message" id="email_error"></div>
               </div>
               <div class="button-group">
@@ -111,78 +123,5 @@
         </div>
       </div>
     </div>
-  <script src="/Capsule.3464ddca.js"></script></body>
+  </body>
 </html>
-
-<!-- <div class="overlay hidden"></div>
-      <div class="add-recipe-window hidden">
-        <button class="btn--close-modal">&times;</button>
-        <form class="upload">
-          <div class="upload__column">
-            <h3 class="upload__heading">Recipe data</h3>
-            <label>Title</label>
-            <input value="TEST" required name="title" type="text" />
-            <label>URL</label>
-            <input value="TEST" required name="sourceUrl" type="text" />
-            <label>Image URL</label>
-            <input value="TEST" required name="image" type="text" />
-            <label>Publisher</label>
-            <input value="TEST" required name="publisher" type="text" />
-            <label>Prep time</label>
-            <input value="23" required name="cookingTime" type="number" />
-            <label>Servings</label>
-            <input value="23" required name="servings" type="number" />
-          </div>
-  
-          <div class="upload__column">
-            <h3 class="upload__heading">Ingredients</h3>
-            <label>Ingredient 1</label>
-            <input
-              value="0.5,kg,Rice"
-              type="text"
-              required
-              name="ingredient-1"
-              placeholder="Format: 'Quantity,Unit,Description'"
-            />
-            <label>Ingredient 2</label>
-            <input
-              value="1,,Avocado"
-              type="text"
-              name="ingredient-2"
-              placeholder="Format: 'Quantity,Unit,Description'"
-            />
-            <label>Ingredient 3</label>
-            <input
-              value=",,salt"
-              type="text"
-              name="ingredient-3"
-              placeholder="Format: 'Quantity,Unit,Description'"
-            />
-            <label>Ingredient 4</label>
-            <input
-              type="text"
-              name="ingredient-4"
-              placeholder="Format: 'Quantity,Unit,Description'"
-            />
-            <label>Ingredient 5</label>
-            <input
-              type="text"
-              name="ingredient-5"
-              placeholder="Format: 'Quantity,Unit,Description'"
-            />
-            <label>Ingredient 6</label>
-            <input
-              type="text"
-              name="ingredient-6"
-              placeholder="Format: 'Quantity,Unit,Description'"
-            />
-          </div>
-  
-          <button class="btn upload__btn">
-            <svg>
-              <use href="src/img/icons.svg#icon-upload-cloud"></use>
-            </svg>
-            <span>Upload</span>
-          </button>
-        </form>
-      </div> -->

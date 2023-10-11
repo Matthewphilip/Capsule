@@ -47,7 +47,7 @@
   display: flex;
 }
 
-@media screen and (width >= 1100px) {
+@media screen and (width >= 1050px) {
   .navbar-button button {
     display: block;
   }
@@ -84,8 +84,6 @@
 
 .left-container {
   text-align: left;
-  flex-direction: column;
-  display: flex;
 }
 
 .right-container {
@@ -133,7 +131,7 @@
 .mobile-contributors {
   align-items: center;
   height: 28px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   font-size: 14px;
   display: flex;
 }
@@ -147,6 +145,8 @@
 
 .text-container {
   margin-bottom: 16px;
+  margin-left: 5px;
+  margin-right: 2px;
   font-size: 16px;
   line-height: 28.8px;
 }
@@ -167,14 +167,43 @@
 }
 
 .e-book {
-  width: 327px;
+  width: 100%;
   height: 459px;
 }
 
-@media screen and (width >= 768px) {
+@media screen and (width >= 440px) {
+  .left-container {
+    text-align: center;
+  }
+
+  .right-container {
+    align-items: center;
+  }
+
+  .mobile-title {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 46px;
+  }
+
+  .mobile-contributors {
+    justify-content: center;
+  }
+
+  .text-container {
+    text-align: center;
+  }
+
+  .e-book {
+    width: 450px;
+    height: 610px;
+  }
+}
+
+@media screen and (width >= 1410px) {
   .body-container {
     flex-direction: row;
-    margin-top: 90px;
+    margin-top: 130px;
   }
 
   .right-container {
@@ -191,6 +220,7 @@
   }
 
   .text-container {
+    text-align: left;
     padding-right: 50px;
   }
 
@@ -265,22 +295,43 @@
   font-weight: 600;
 }
 
-.input-group input {
+.input-group-input {
   box-shadow: none;
+  color: #4d576b;
   background-color: #fff;
-  border-style: solid;
-  border-width: 1px;
+  border: 1px solid #d9dfe8;
   border-radius: 10px;
   outline: none;
   margin-bottom: 20px;
   padding: 15px;
   font-size: 16px;
-  border-color: #d9dfe8 !important;
 }
 
-.input-group input:focus {
+.input-group-input:disabled {
+  color: #d4d9df;
+  cursor: not-allowed;
+  background-color: #f8f9fb;
+}
+
+.input-group-input:hover {
+  border-color: #acb1b7;
+}
+
+.input-group-input:hover::placeholder {
+  color: #b2b9c4;
+}
+
+.input-group-input.error {
+  border: 1px solid red;
+}
+
+.input-group-input.error::placeholder {
+  color: red;
+}
+
+.input-group-input:focus {
+  border-color: #444bf7;
   box-shadow: 0 0 5px #000000b3;
-  border-color: #444bf7 !important;
 }
 
 .modal-button {
@@ -311,7 +362,7 @@
 
 .confirmation-text {
   color: green;
-  margin-left: 20px;
+  text-align: center;
   display: none;
 }
 
@@ -359,7 +410,8 @@
   }
 
   .confirmation-text {
-    margin-left: none;
+    text-align: left;
+    margin-left: 20px;
   }
 }
 
@@ -372,7 +424,14 @@
   margin-right: 20px;
 }
 
-@media screen and (width >= 768px) {
+@media screen and (width >= 440px) {
+  .lander-container {
+    margin-left: 120px;
+    margin-right: 120px;
+  }
+}
+
+@media screen and (width >= 1320px) {
   .lander-container {
     margin-left: 200px;
     margin-right: 200px;
