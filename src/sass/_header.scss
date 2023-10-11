@@ -1,27 +1,21 @@
-/* Basic styles for the navbar */
 .navbar-container {
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: space-between;
   color: white;
   padding: 10px 20px;
-
+  margin-top: 10px;
 }
 
-/* Links styles */
 .navbar-actions {
-  flex-grow: 1;
-  /* Let the links fill the remaining space */
+  display: none;
 }
 
-/* Links styles */
 .navbar-actions ul {
   list-style: none;
   display: flex;
   gap: 20px;
-  gap: 20px;
   justify-content: flex-end;
-  /* Align links to the right */
 }
 
 .navbar-actions li {
@@ -29,7 +23,6 @@
   color: #202938;
   font-weight: 600;
   margin-right: 15px;
-
 }
 
 .navbar-actions a {
@@ -37,8 +30,8 @@
   color: #202938;
 }
 
-/* Button styles */
 .navbar-button button {
+  display: none;
   padding: 10px 20px;
   background-color: #444BF7;
   border: none;
@@ -50,60 +43,42 @@
   margin-left: 50px;
 }
 
-/* Hamburger menu styles */
+// hamburger menu 
 .navbar-toggle {
-  display: none;
-  /* Hide initially on larger screens */
-  flex-direction: column;
-  cursor: pointer;
+  display: flex;
 }
 
-.navbar-toggle span {
-  width: 30px;
-  height: 4px;
-  background-color: black;
-  margin: 4px 0;
-}
+@media screen and (min-width: 1100px) {
 
-/* Media query for responsive design */
-@media screen and (max-width: 768px) {
-
-  /* Hide the logo and button on smaller screens */
-  .navbar-logo,
-  .navbar-button {
+  .navbar-button button {
     display: none;
   }
 
-  /* Show the hamburger menu icon */
+  .navbar-button button {
+    display: block;
+  }
+
+  .navbar-actions {
+    display: block;
+    flex-grow: 1;
+  }
+
   .navbar-toggle {
-    display: flex;
+    display: none;
   }
 
-  /* Display the links as a vertical list */
+  // display the links as a horizontal list for larger screens
   .navbar-actions ul {
-    flex-direction: column;
-    text-align: center;
-    background-color: #333;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    transition: max-height 0.3s ease-in-out;
-    max-height: 0;
-    overflow: hidden;
-  }
-
-  .navbar-actions.active ul {
-    max-height: 200px;
-    /* Adjust as needed */
+    flex-direction: row;
+    justify-content: flex-end;
+    position: static;
+    max-height: none;
+    overflow: visible;
   }
 
   .navbar-actions li {
-    margin: 10px 0;
+    margin-right: 15px;
+    margin-left: 0;
   }
 
-  /* Style the active class for the hamburger menu */
-  .navbar-actions.active {
-    position: relative;
-  }
 }

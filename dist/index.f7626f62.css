@@ -1,13 +1,14 @@
 .navbar-container {
   color: #fff;
-  justify-content: start;
+  justify-content: space-between;
   align-items: center;
+  margin-top: 10px;
   padding: 10px 20px;
   display: flex;
 }
 
 .navbar-actions {
-  flex-grow: 1;
+  display: none;
 }
 
 .navbar-actions ul {
@@ -39,59 +40,45 @@
   padding: 10px 20px;
   font-size: 16px;
   font-weight: bold;
-}
-
-.navbar-toggle {
-  cursor: pointer;
-  flex-direction: column;
   display: none;
 }
 
-.navbar-toggle span {
-  background-color: #000;
-  width: 30px;
-  height: 4px;
-  margin: 4px 0;
+.navbar-toggle {
+  display: flex;
 }
 
-@media screen and (width <= 768px) {
-  .navbar-logo, .navbar-button {
-    display: none;
+@media screen and (width >= 1100px) {
+  .navbar-button button {
+    display: block;
+  }
+
+  .navbar-actions {
+    flex-grow: 1;
+    display: block;
   }
 
   .navbar-toggle {
-    display: flex;
+    display: none;
   }
 
   .navbar-actions ul {
-    text-align: center;
-    background-color: #333;
-    flex-direction: column;
-    width: 100%;
-    max-height: 0;
-    transition: max-height .3s ease-in-out;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    overflow: hidden;
-  }
-
-  .navbar-actions.active ul {
-    max-height: 200px;
+    flex-direction: row;
+    justify-content: flex-end;
+    max-height: none;
+    position: static;
+    overflow: visible;
   }
 
   .navbar-actions li {
-    margin: 10px 0;
-  }
-
-  .navbar-actions.active {
-    position: relative;
+    margin-left: 0;
+    margin-right: 15px;
   }
 }
 
 .body-container {
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   display: flex;
 }
 
@@ -108,23 +95,23 @@
   display: flex;
 }
 
-.test1 {
+.title-large {
   color: #202938;
-  margin-top: 30px;
   margin-bottom: 20px;
+  padding-top: 30px;
   font-size: 52px;
   font-weight: 700;
   display: none;
 }
 
-.test2 {
+.contributor-large {
   align-items: center;
   margin-bottom: 30px;
   font-size: 14px;
   display: none;
 }
 
-.test2 img {
+.contributor-large img {
   border-radius: 30px;
   display: none;
 }
@@ -175,6 +162,10 @@
   font-weight: 500;
 }
 
+.lander-button:hover {
+  box-shadow: 0 0 5px #000000b3;
+}
+
 .e-book {
   width: 327px;
   height: 459px;
@@ -183,20 +174,19 @@
 @media screen and (width >= 768px) {
   .body-container {
     flex-direction: row;
-    align-items: center;
     margin-top: 90px;
   }
 
   .right-container {
     align-items: start;
-    margin-left: 90px;
+    margin-left: 120px;
   }
 
   .mobile-title, .mobile-contributors, .mobile-contributors img {
     display: none;
   }
 
-  .test1, .test2, .test2 img {
+  .title-large, .contributor-large, .contributor-large img {
     display: flex;
   }
 
@@ -209,7 +199,7 @@
     width: 275px;
   }
 
-  .mobile-contributors, .e-book {
+  .e-book {
     width: 436px;
     height: 526px;
   }
@@ -289,7 +279,7 @@
 }
 
 .input-group input:focus {
-  text-shadow: 2px 2px 4px #000000b3;
+  box-shadow: 0 0 5px #000000b3;
   border-color: #444bf7 !important;
 }
 
